@@ -3,9 +3,9 @@ import QtQuick.Controls 1.2
 
 ApplicationWindow {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+    width: 1000
+    height: 500
+    title: qsTr("Ilya Soccer")
 
     menuBar: MenuBar {
         Menu {
@@ -21,8 +21,9 @@ ApplicationWindow {
         }
     }
 
-    Text {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
+    Rectangle{
+        color: "green"
+        width: 1000
+        height: 500
     }
 }
