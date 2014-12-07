@@ -15,11 +15,11 @@ void Park::init(){
     scene->setBackgroundBrush(Qt::green);
     QPen pen(Qt::white);
     int side = 30;
-    scene->addLine(side,side,1000 - side,side,pen);
-    scene->addLine(side,500 - side,1000 -side,500 - side,pen);
-    scene->addLine(side,side,side,500 - side,pen);
-    scene->addLine(500,side,500,500 - side,pen);
-    scene->addLine(1000 - side,side,1000 -side,500 - side,pen);
+    scene->addRect(side,side,500-side,500-side * 2,pen);
+    scene->addRect(500,side,500-side,500-side * 2,pen);
+    scene->addEllipse(350,100,300,300,pen);
+    scene->addRect(side,500/2 - 200 /2 ,80,200,pen);
+    scene->addRect(1000 - side - 80,500/2 - 200 /2 ,80,200,pen);
 
     setScene(scene);
 }

@@ -14,7 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    park.cpp
+    park.cpp \
+    ball.cpp
 
 HEADERS  += mainwindow.h \
-    park.h
+    park.h \
+    ball.h
