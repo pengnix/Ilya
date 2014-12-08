@@ -7,11 +7,16 @@ class Ball : public QGraphicsObject
 {
     Q_OBJECT
 public:
-//    explicit Ball(QObject *parent = 0);
+    explicit Ball();
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    QRectF boundingRect() const;
 
 signals:
 
 public slots:
+private :
+    int centerX;
+    int centerY;
 
 };
 

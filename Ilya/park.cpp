@@ -1,5 +1,6 @@
 #include "park.h"
 #include "qpen.h"
+#include <ball.h>
 
 Park::Park(QWidget *parent) :
     QGraphicsView(parent)
@@ -20,6 +21,9 @@ void Park::init(){
     scene->addEllipse(350,100,300,300,pen);
     scene->addRect(side,500/2 - 200 /2 ,80,200,pen);
     scene->addRect(1000 - side - 80,500/2 - 200 /2 ,80,200,pen);
+
+    ball = new Ball;
+    scene->addItem(ball);
 
     setScene(scene);
 }

@@ -2,6 +2,7 @@
 #define PARK_H
 
 #include <QGraphicsView>
+#include <ball.h>
 
 class Park : public QGraphicsView
 {
@@ -14,6 +15,7 @@ signals:
 public slots:
 private:
     void init();
+    Ball *ball;
 
 };
 
