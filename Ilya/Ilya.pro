@@ -15,8 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     park.cpp \
-    ball.cpp
+    ball.cpp \
+    player.cpp \
+    mvector.cpp
 
 HEADERS  += mainwindow.h \
     park.h \
-    ball.h
+    ball.h \
+    player.h \
+    mvector.h

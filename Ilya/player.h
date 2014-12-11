@@ -1,21 +1,19 @@
-#ifndef BALL_H
-#define BALL_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <QGraphicsObject>
 
-class Ball : public QGraphicsObject
+class Player : public QGraphicsObject
 {
-    Q_OBJECT
+//    Q_OBJECT
 public:
-    explicit Ball();
+    explicit Player();
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
 
 //signals:
-
 //public slots:
     void advance();
-
 };
 
-#endif // BALL_H
+#endif // PLAYER_H

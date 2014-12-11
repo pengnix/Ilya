@@ -3,6 +3,7 @@
 
 #include <QGraphicsView>
 #include <ball.h>
+#include <player.h>
 
 class Park : public QGraphicsView
 {
@@ -13,9 +14,11 @@ public:
 signals:
 
 public slots:
+    void advance();
 private:
     void init();
     Ball *ball;
+    Player *player;
 
 };
 
