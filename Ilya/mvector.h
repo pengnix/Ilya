@@ -5,6 +5,13 @@ class MVector
 {
 public:
     MVector();
+    MVector(double x, double y);
+    double getX();
+    double getY();
+    void normal();
+private:
+    double x;
+    double y;
 };
 
 #endif // MVECTOR_H

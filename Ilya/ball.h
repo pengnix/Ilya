@@ -2,12 +2,14 @@
 #define BALL_H
 
 #include <QGraphicsObject>
+#include <mvector.h>
 
 class Ball : public QGraphicsObject
 {
     Q_OBJECT
 public:
     explicit Ball();
+    explicit Ball(MVector&);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
 
@@ -15,6 +17,8 @@ public:
 
 //public slots:
     void advance();
+private:
+    MVector head;
 
 };
 

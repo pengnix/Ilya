@@ -5,6 +5,9 @@
 Ball::Ball()
 {
 }
+Ball::Ball(MVector &head):head(head){
+
+}
 
 void Ball::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     int radius = 10;
@@ -18,6 +21,6 @@ QRectF Ball::boundingRect() const{
 }
 
 void Ball::advance(){
-    this->setRotation(2);
-    this->setPos(this->x()+1,this->y());
+//    this->setRotation(2);
+    this->setPos(this->x()+head.getX(),this->y() + head.getY());
 }

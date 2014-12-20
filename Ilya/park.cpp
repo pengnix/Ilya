@@ -23,8 +23,9 @@ void Park::init(){
     scene->addEllipse(350,100,300,300,pen);
     scene->addRect(side,500/2 - 200 /2 ,80,200,pen);
     scene->addRect(1000 - side - 80,500/2 - 200 /2 ,80,200,pen);
-
-    ball = new Ball;
+    MVector *ballHead = new MVector(5,5);
+    ballHead->normal();
+    ball = new Ball(*ballHead);
     ball->setPos(500,250);
     scene->addItem(ball);
 //    for(int i=0;i<3;i++){
@@ -40,6 +41,6 @@ void Park::init(){
 }
 
 void Park::advance(){
-player->advance();
+//player->advance();
 ball->advance();
 }
