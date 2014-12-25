@@ -25,7 +25,7 @@ void Park::init(){
     scene->addRect(1000 - side - 80,500/2 - 200 /2 ,80,200,pen);
     MVector *ballHead = new MVector(5,5);
     ballHead->normal();
-    ball = new Ball(*ballHead);
+    ball = new Ball(*ballHead,3.0f);
     ball->setPos(500,250);
     scene->addItem(ball);
 //    for(int i=0;i<3;i++){
@@ -43,4 +43,11 @@ void Park::init(){
 void Park::advance(){
 //player->advance();
 ball->advance();
+}
+
+void Park::mousePressEvent(QMouseEvent *event){
+    double newX = event->x() - ball->x();
+    double newY = event->y() - ball->y();
+    ball->setHeading(newX,newY);
+    ball->setSpeed(3.0f);
 }

@@ -21,3 +21,11 @@ void MVector::normal(){
     x = x/len;
     y = y/len;
 }
+
+void MVector::setX(double x){
+    this->x = x;
+}
+
+void MVector::setY(double y){
+    this->y = y;
+}
